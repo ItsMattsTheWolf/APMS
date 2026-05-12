@@ -1,0 +1,10 @@
+# APMS runtime output
+APMS/Logs/
+APMS/Reports/
+
+# Windows shortcuts
+*.lnk
+
+# Windows thumbnail cache
+Thumbs.db
+desktop.ini
