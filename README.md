@@ -138,12 +138,42 @@ Clean/
 
 ---
 
+## Code sample
+
+The logging system writes to file and console simultaneously, with level-based color coding:
+
+```powershell
+function Write-Log {
+
+    param(
+        [string]$Message,
+        [string]$Level = "INFO"
+    )
+
+    $time = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    $line = "[$time] [$Level] $Message"
+
+    [System.IO.File]::AppendAllText(
+        $LogFile,
+        $line + [Environment]::NewLine
+    )
+
+    if (!$Silent) {
+        switch ($Level) {
+            "ERROR" { Write-Host $line -ForegroundColor Red    }
+            "WARN"  { Write-Host $line -ForegroundColor Yellow }
+            default { Write-Host $line -ForegroundColor Cyan   }
+        }
+    }
+}
+```
+
+---
+
 ## License
 
-This project is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+This project is licensed under the **MIT License**.
 
-You are free to share and redistribute it, adapt and build upon it, and use it for any purpose — including commercially — as long as appropriate credit is given to the original author.
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of this software, as long as the original copyright notice is included.
 
 **Author:** <mwframework.contact@gmail.com>
-
-Full license text: <https://creativecommons.org/licenses/by/4.0/>
