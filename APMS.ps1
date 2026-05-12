@@ -1,7 +1,7 @@
 <# =====================================================================
  APMS
  Advanced Performance Management Suite
- Version: 1.2.7
+ Version: 1.2.8
 
  Debloat approach inspired by:
    Win11Debloat by Raphire (https://github.com/Raphire/Win11Debloat)
