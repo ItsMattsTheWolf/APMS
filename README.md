@@ -2,6 +2,8 @@
 
 ## Version 1.2.7
 
+[![Download](https://img.shields.io/github/v/release/ItsMattsTheWolf/APMS?label=Download&style=for-the-badge&logo=github)](https://github.com/ItsMattsTheWolf/APMS/releases/latest/download/Clean.zip)
+
 A Windows cleanup and maintenance tool. Removes temporary files, browser cache, update leftovers, and more — with detailed logging and an HTML report on every run.
 
 ---
